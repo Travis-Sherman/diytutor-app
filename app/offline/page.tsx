@@ -7,11 +7,11 @@ export default function OfflinePage() {
         </div>
 
         <h1 className="text-2xl font-heading font-bold text-white mb-4">
-          You're Offline
+          You&apos;re Offline
         </h1>
 
         <p className="text-dark-300 mb-6">
-          No internet connection detected. Don't worry - your saved projects are still available.
+          No internet connection detected. Don&apos;t worry - your saved projects are still available.
         </p>
 
         <a

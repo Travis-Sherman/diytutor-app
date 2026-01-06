@@ -21,8 +21,8 @@ export default function LoginPage() {
       await signIn(email, password)
       toast.success('Welcome back!')
       router.push('/dashboard')
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to sign in')
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Failed to sign in')
     } finally {
       setLoading(false)
     }
@@ -35,8 +35,8 @@ export default function LoginPage() {
       await signInWithGoogle()
       toast.success('Welcome back!')
       router.push('/dashboard')
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to sign in with Google')
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Failed to sign in with Google')
     } finally {
       setLoading(false)
     }
@@ -125,7 +125,7 @@ export default function LoginPage() {
       </button>
 
       <p className="text-center text-sm text-dark-300 mt-8">
-        Don't have an account?{' '}
+        Don&apos;t have an account?{' '}
         <Link href="/signup" className="text-amber hover:text-amber-400 font-medium">
           Sign up
         </Link>
